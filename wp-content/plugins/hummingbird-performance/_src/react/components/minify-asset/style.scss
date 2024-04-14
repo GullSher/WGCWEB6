@@ -1,0 +1,331 @@
+@import "~@wpmudev/shared-ui/scss/functions";
+@import "~@wpmudev/shared-ui/scss/colors";
+@import "~@wpmudev/shared-ui/scss/variables";
+@import "~@wpmudev/shared-ui/scss/mixins";
+@import "../../../scss/common/mixins";
+
+@include body-class(true) {
+
+  @keyframes pop{
+    50% {
+      transform: scale(1.2);
+    }
+  }
+
+  .wphb-ao-asset {
+    padding: 10px 15px 10px 20px;
+    height: 70px;
+
+    // Status icon.
+    .wphb-ao-asset-status {
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background-color: $white;
+      box-shadow: 0 2px 7px 0 rgba( 0, 0, 0, 0.05 );
+      left: 20px;
+      animation: pop 0.3s linear 1;
+
+      & > [class^="sui-icon-"] {
+        position: absolute;
+        height: 12px;
+        width: 12px;
+        font-size: 12px;
+        line-height: 22px;
+        left: 4px;
+      }
+
+      .sui-icon-update:before { color: $blue; }
+      .sui-icon-check-tick:before { color: $green; }
+      .sui-icon-info:before { color: palette( silver, medium ); }
+      .wphb-asset-status-safe-mode:before { color: $blue; pointer-events: auto; }
+    }
+
+    // Checkbox.
+    .sui-builder-field-label .sui-form-field {
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
+
+    .wphb-filename-extension { margin: 0; }
+
+    // Icon tooltip.
+    .sui-builder-field-label > span.sui-tooltip {
+      overflow: visible !important;
+
+      .wphb-filename-extension:hover {
+        background-color: rgba(51,51,51,0.75);
+        cursor: pointer;
+        overflow: hidden;
+        color: transparent;
+
+        &:before {
+          font-family: wpmudev-plugin-icons;
+          content: '\AE';
+          color: #fff;
+          font-size: 12px;
+          margin-top: -5px;
+          display: block;
+        }
+      }
+    }
+
+    // Asset name, size and link.
+    .wphb-ao-asset-info {
+      display: flex;
+      flex-wrap: wrap;
+      white-space: nowrap;
+      margin-left: 10px;
+
+      & > {
+        * {
+          color: palette( silver, medium );
+          font-size: 10px;
+          line-height: 12px;
+        }
+
+        span {
+          &:first-child {
+            color: palette( gray, default );
+            font-size: 13px;
+            line-height: 16px;
+            flex-basis: 100%;
+            margin-bottom: 2px;
+          }
+
+          .sui-icon-chevron-down { margin: 0 2px; }
+          .sui-icon-chevron-down:before { font-size: 8px; }
+          .sui-icon-chevron-down:before, .compressed-size { color: $green; }
+        }
+
+        .wphb-ao-asset-handle {
+          padding-bottom: 2px;
+        }
+
+        div.wphb-ao-asset-file-url {
+          flex-basis: 100%;
+          padding-top: 2px;
+
+          > span {
+            margin-right: 2px;
+          }
+
+          a {
+            color: #1ABC9C;
+
+/*            span {
+              &:nth-child(2) {
+                width: 8px;
+                overflow: hidden;
+                display: inline-block;
+                margin-left: 1px;
+                margin-right: 1px;
+
+                &:before {
+                  display: inline-block;
+                  content: "...";
+                  width: 10px;
+                  height: 10px;
+                  vertical-align: bottom;
+                }
+              }
+            }*/
+          }
+        }
+
+        a {
+          color: $blue;
+
+          &:not(.wphb-minification-font-url) {
+            max-width: 200px;
+            overflow: hidden;
+          }
+        }
+
+        .wphb-minification-font-url {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: inline-block;
+          width: auto;
+          max-width: 700px;
+          @include bp(desktop-very-large) { width: 550px; }
+          @include bp(desktop-wide) { width: 380px; }
+        }
+      }
+    }
+
+    // Settings.
+    .wphb-ao-asset-actions {
+      display: flex;
+
+      & > .sui-tooltip > .sui-form-field {
+        margin-bottom: 0;
+        margin-left: 5px;
+
+        .sui-toggle-label {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 38px;
+          width: 48px;
+          border: 1px solid $code-border-color;
+          border-radius: 4px;
+          transition-property: background, color;
+          transition-duration: 0.3s;
+
+          & > span[class^="sui-icon-"] { line-height: 12px; }
+        }
+
+        input[type="checkbox"]:checked:not(:disabled) + span {
+          background-color: palette( blue, light );
+          border-color: palette( blue, light );
+
+          & > [class^="sui-icon-"]:not([class^="sui-icon-eye"]):before {
+            color: palette( blue, default );
+          }
+        }
+
+        input[type="checkbox"]:disabled + span {
+          background-color: #F5F5F5;
+          border-color: palette( silver, light );
+
+          & > [class*="sui-icon-"]:before {
+            color: palette( gray, lighter );
+          }
+        }
+
+        .wphb-asset-action-highlighted {
+          input[type=checkbox] {
+            &:not(:disabled) {
+              & + span {
+                border: 2px solid #888888;
+              }
+
+              &:checked + span {
+                border-color: #17A8E3;
+              }
+            }
+          }
+        }
+      }
+
+      // Exclude selector.
+      & > .sui-tooltip:last-of-type {
+        margin-left: 8px;
+
+        & > .sui-form-field input[type="checkbox"]:not(:checked) + span {
+          border: 0;
+
+          &:hover {
+            background-color: palette( red, light );
+            border-color: palette( red, light );
+            [class^="sui-icon-"]:before { color: palette( red, default ); }
+          }
+        }
+
+        & > .sui-form-field input[type="checkbox"]:checked + span {
+          background-color: $white;
+        }
+      }
+    }
+
+    // Disabled state.
+    &.disabled {
+      background-color: palette( silver, light ) !important;
+      border: 1px solid $code-border-color;
+      box-shadow: none !important;
+      pointer-events: none;
+
+      .wphb-filename-extension,
+      .wphb-ao-asset-info > a { opacity: 0.4; }
+      .wphb-ao-asset-info > span { color: palette( silver, medium ); }
+
+      .wphb-ao-asset-actions {
+        & > .sui-tooltip:not(:last-of-type) > .sui-form-field {
+          input[type="checkbox"]:checked:not(:disabled) + span,
+          input[type="checkbox"] + span {
+            background-color: #F5F5F5;
+            border-color: #F5F5F5;
+            pointer-events: none;
+            & > [class^="sui-icon-"]:before { color: palette(gray, lighter) !important; }
+          }
+        }
+        // Exclude selector.
+        & > .sui-tooltip:last-of-type > .sui-form-field input[type="checkbox"]:checked + span {
+          border-color: $code-border-color;
+          pointer-events: all;
+
+          &:hover {
+            background-color: $white;
+            border-color: $code-border-color;
+            [class^="sui-icon-"]:before { color: palette( gray, light ); }
+          }
+        }
+      }
+    }
+  }
+
+  .sui-box-builder .sui-builder-field.wphb-ao-asset:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @include media( max-width, md ) {
+    .wphb-ao-asset {
+      cursor: pointer;
+      flex-flow: row wrap;
+      height: 50px;
+      margin: 0 0 10px !important;
+      padding: 0 15px;
+
+      &:last-of-type { margin-bottom: 0 !important; }
+
+      .wphb-filename-extension {
+        width: 25px;
+        height: 25px;
+      }
+
+      // Status icon.
+      .wphb-ao-asset-status { left: 10px; }
+
+      .wphb-ao-asset-info {
+        .component { display: none; }
+        a { margin-left: 5px; }
+      }
+
+      // Asset name, size and link.
+      .wphb-ao-asset-info:after {
+        font-size: 15px;
+        font-family: dashicons, Arial, sans-serif;
+        color: palette( gray, default );
+        content: "\F347";
+        position: absolute;
+        right: 40px;
+        margin-top: 4px;
+      }
+
+      &.open {
+        height: 121px;
+        padding: 10px 15px;
+        .wphb-ao-asset-actions { display: flex; }
+        .wphb-ao-asset-info:after { content: "\f343"; }
+      }
+
+      // Settings.
+      .wphb-ao-asset-actions {
+        display: none;
+        cursor: default;
+        margin: 10px 0;
+        border-top: 1px solid #E6E6E6;
+        padding-top: 15px;
+        width: 100%;
+
+        & > .sui-tooltip:last-of-type {
+          position: absolute;
+          right: 35px;
+        }
+      }
+    }
+  }
+
+}

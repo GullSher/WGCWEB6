@@ -1,0 +1,22 @@
+@import "~@wpmudev/shared-ui/scss/functions";
+@import "~@wpmudev/shared-ui/scss/colors";
+@import "~@wpmudev/shared-ui/scss/variables";
+@import '~@wpmudev/shared-ui/scss/mixins';
+
+@include body-class(true) {
+
+  #wrap-wphb-summary {
+    margin-bottom: 30px;
+
+    .sui-summary-segment:last-of-type {
+      overflow: visible;
+
+      .sui-tooltip > [class^=sui-icon-] {
+        line-height: 15px;
+        margin-left: 10px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+}

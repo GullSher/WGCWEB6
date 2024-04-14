@@ -1,0 +1,339 @@
+# Copyright (C) 2022 bPlugins LLC
+# This file is distributed under the GPLv3.
+msgid ""
+msgstr ""
+"Project-Id-Version: B Social Share - Block 1.0.5\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/b-social-share\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-07-16T14:19:56+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: social-share\n"
+
+#. Plugin Name of the plugin
+msgid "B Social Share - Block"
+msgstr ""
+
+#. Description of the plugin
+msgid "Share your website/website-page link to social networks and mobile messengers"
+msgstr ""
+
+#. Author of the plugin
+msgid "bPlugins LLC"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://bplugins.com"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2306
+msgid "Default"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2307
+msgid "Theme 1"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2308
+msgid "Theme 2"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2312
+msgid "Social Networks"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2313
+msgid "Mobile Messenger"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2317
+msgid "Facebook"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2318
+msgid "Twitter"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2319
+msgid "LinkedIn"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2320
+msgid "Pinterest"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2321
+msgid "Blogger"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2322
+msgid "WordPress"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2323
+msgid "Tumblr"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2324
+msgid "Reddit"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2325
+msgid "Digg"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2326
+msgid "LiveJournal"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2327
+msgid "Evernote"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2328
+msgid "Flipboard"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2329
+msgid "Mix"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2330
+msgid "Pocket"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2331
+msgid "Buffer"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2332
+msgid "Instapaper"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2334
+msgid "Meneame"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2336
+msgid "Baidu"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2337
+msgid "Weibo"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2338
+msgid "Xing"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2339
+msgid "RenRen"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2341
+msgid "Vkontakte (VK)"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2342
+msgid "Odnoklassniki"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2343
+msgid "My World@Mail.Ru"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2344
+msgid "Surfingbird"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2345
+msgid "LiveInternet"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2349
+msgid "SMS"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2350
+msgid "Skype"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2351
+msgid "Telegram"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2352
+msgid "Viber"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2353
+msgid "WhatsApp"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2354
+msgid "WeChat"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2355
+msgid "LINE"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2428
+msgid "Help"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2430
+msgid "Read Documentation"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2435
+msgid "Would you please rate us?"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2436
+msgid "We are new and we need your help to grow!🙏"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2442
+msgid "Add or Remove socials"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2447
+msgid "Network Type:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2459
+msgid "Network:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2480
+msgid "Upload Icon?"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2482
+#: dist/editor.js:2483
+msgid "Icon:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2486
+#: dist/editor.js:2490
+msgid "Remove"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2492
+#: dist/editor.js:2496
+msgid "Duplicate"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2501
+msgid "Add New Social"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2506
+msgid "Social Icon"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2508
+msgid "Theme:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2540
+msgid "Background:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2542
+msgid "Size:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2544
+msgid "Padding:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2546
+msgid "Space Between:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2548
+msgid "Border:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2550
+msgid "Shadow:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2557
+msgid "Social Icons in left"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2558
+msgid "Social Icons in center"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:2559
+msgid "Social Icons in right"
+msgstr ""

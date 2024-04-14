@@ -1,0 +1,25 @@
+@import "~@wpmudev/shared-ui/scss/functions";
+@import "~@wpmudev/shared-ui/scss/colors";
+@import "~@wpmudev/shared-ui/scss/variables";
+@import '~@wpmudev/shared-ui/scss/mixins';
+
+@include body-class(true) {
+
+  #wrap-wphb-summary {
+    .sui-summary .sui-summary-details .sui-icon-check-tick {
+      top: 0;
+      left: 0;
+      height: 0;
+      margin: 0;
+    }
+
+    .sui-list-detail {
+      display: flex;
+      align-items: center;
+      line-height: 1px;
+    }
+
+    .sui-icon-check-tick { margin-left: 10px; }
+  }
+
+}

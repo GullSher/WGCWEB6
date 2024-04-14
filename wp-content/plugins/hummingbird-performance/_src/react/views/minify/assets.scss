@@ -1,0 +1,132 @@
+@import "~@wpmudev/shared-ui/scss/functions";
+@import "~@wpmudev/shared-ui/scss/colors";
+@import "~@wpmudev/shared-ui/scss/variables";
+@import "~@wpmudev/shared-ui/scss/mixins";
+@import "../../../scss/common/mixins";
+
+@include body-class(true) {
+  /**
+   * Common between both auto and manual modes.
+   */
+  div[class*='box-minification-assets-'] {
+    .sui-box-header .sui-actions-right > span:first-of-type {
+      margin-right: 10px;
+    }
+
+    .sui-box-body > .sui-actions {
+      float: right;
+      font-size: 13px;
+      line-height: 40px;
+
+      .sui-icon-info {
+        margin-right: 5px;
+        position: relative;
+        top: 1px;
+        &:before { color: palette( blue, default ); }
+      }
+    }
+
+    .sui-box-builder.sui-flushed { margin-top: 30px; }
+  }
+
+  /**
+   * Automatic mode.
+   */
+  .box-minification-assets-auto .sui-box-builder.sui-flushed {
+    .sui-builder-field {
+      padding: 30px;
+      align-items: flex-start;
+
+      &:last-of-type { margin-bottom: 0; }
+
+      &.wphb-close-section {
+        box-shadow: none;
+        border: 1px solid palette( gray, lighter );
+        background-color: palette( silver, light );
+
+        .sui-builder-field-label:first-child > [class^='sui-icon-'] {
+          background-color: palette( silver, medium );
+        }
+        strong { color: palette( gray, light ); }
+      }
+
+      @include bp(tablet) {
+        flex-wrap: wrap;
+      }
+    }
+
+    .sui-builder-field-label {
+      flex-basis: 260px;
+
+      &:first-child > [class^='sui-icon-'] {
+        background-color: palette( blue, default );
+        width: 31px;
+        height: 30px;
+        border-radius: 5px;
+        margin-right: 10px;
+        margin-left: 0 !important;
+
+        &:before {
+          color: palette( mono, white );
+          line-height: 30px;
+        }
+      }
+
+      .sui-tag, strong { margin-right: 10px; }
+    }
+
+    small {
+      color: palette( silver, medium );
+      margin: 0 30px 0 0;
+      flex-basis: 100%;
+      flex-shrink: 2;
+
+      @include bp(tablet) {
+        flex-basis: 100%;
+        margin: 10px 0 0 0;
+        order: 5;
+      }
+    }
+  }
+
+  /**
+   * Manual mode.
+   */
+  .box-minification-assets-manual .sui-box-builder.sui-flushed {
+    .sui-box.sui-box-sticky {
+      margin: 0;
+
+      &.wphb-expanded {
+        .sui-button-icon.sui-button-outlined {
+          border-color: #888;
+          background-color: #888;
+          color: #fff;
+        }
+      }
+
+      &:not(.wphb-expanded) {
+        .sui-box-header { border-bottom: 0; }
+        .sui-box-body,
+        .sui-box-footer { display: none; }
+      }
+
+      // Fix item alignment.
+      .sui-actions-right > .sui-tooltip { display: flex; }
+    }
+
+    .sui-notice-warning {
+      margin-top: 30px;
+      margin-bottom: 25px;
+    }
+
+    .sui-builder-fields > .sui-form-field {
+      margin: 25px 0 5px;
+      padding-left: 20px;
+
+      @include media(max-width, md) {
+        padding-left: 15px;
+      }
+    }
+  }
+
+}

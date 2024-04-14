@@ -1,0 +1,16 @@
+/*
+Theme Name: Astra Child
+Theme URI: (The URL of your child theme)
+Description: WGC Theme
+Author: Gull Sher
+Author URI: (mobilegull73@gmail.com)
+Template: Astra
+Version: 1.0
+Screenshot: screenshot.png
+*/
+
+/* Import the parent theme's stylesheet */
+@import url('../astra/style.css');
+
+
+

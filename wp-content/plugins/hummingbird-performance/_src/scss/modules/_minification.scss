@@ -1,0 +1,272 @@
+/* ****************************************************************************
+ * MODULES: MINIFICATION
+ */
+
+@import "../common/variables";
+@import "../common/mixins";
+
+.wrap-wphb-minification {
+    .sui-modal {
+        text-align: left;
+        z-index: 102 !important;
+    }
+
+    .box-minification-tools textarea {
+        height: 400px;
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+    /* Two column layouts: used in page types table */
+    .box-minification-tools .wphb-dash-table.three-columns > .wphb-dash-table-row > div {
+        flex-basis: 25%;
+    }
+
+    .box-minification-tools .wphb-dash-table-row {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        height: 60px;
+        border-top: 1px solid #E6E6E6;
+
+        &:first-child {
+            border-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: -10px;
+        }
+
+        > div {
+            text-align: center;
+
+            &:first-child {
+                display: flex;
+                align-items: center;
+                align-content: center;
+                flex-basis: 50% !important;
+                text-align: left;
+                font-size: 13px;
+                color: #333333;
+                font-weight: 500;
+                line-height: 16px;
+            }
+
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+
+    #critical_css_delivery_box {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom-width: 0;
+        .sui-table {
+            margin: 10px 0;
+        }
+    }
+    /**
+     * Auto to manual modal
+     * @since 2.6.0
+     */
+    #wphb-upgrade-minification-modal .sui-box-body a,
+    #wphb-advanced-minification-modal .sui-box-body a {
+        display: block;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-top: 15px;
+        color: #888;
+    }
+    #wphb-upgrade-minification-modal .sui-box-body a {
+        text-transform: initial;
+        color: #17A8E3;
+    }
+
+    /**
+     * How to modals.
+     * @since 2.6.0
+     */
+    #manual-ao-hdiw-modal #manual-ao-hdiw-modal-expand,
+    #automatic-ao-hdiw-modal #automatic-ao-hdiw-modal-expand {
+        display: none;
+    }
+
+    #manual-ao-hdiw-modal.sui-modal-sm,
+    #automatic-ao-hdiw-modal.sui-modal-sm {
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translate3d(150px, 0, 0);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeOutRight {
+            from {
+                opacity: 1;
+                transform: none;
+            }
+            to {
+                opacity: 0;
+                transform: translate3d(150px, 0, 0);
+            }
+        }
+
+        .sui-content-fade-in {
+            animation-duration: 0.1s !important;
+            animation-name: fadeInRight !important;
+        }
+
+        .sui-content-fade-out {
+            animation-duration: 0.1s !important;
+            animation-name: fadeOutRight !important;
+        }
+
+        #manual-ao-hdiw-modal-content,
+        #automatic-ao-hdiw-modal-content {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0;
+
+            & > .sui-box {
+                border-radius: 0;
+            }
+        }
+
+        #manual-ao-hdiw-modal-collapse,
+        #automatic-ao-hdiw-modal-collapse {
+            display: none;
+        }
+
+        #manual-ao-hdiw-modal-expand,
+        #automatic-ao-hdiw-modal-expand {
+            display: inline-flex;
+        }
+
+        h3, h4 {
+            margin-top: 20px;
+        }
+    }
+
+    #manual-ao-hdiw-modal-header-wrap {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        margin: 0;
+
+        &.sui-box {
+            &.video-playing #manual-ao-hdiw-modal-video-desc {
+                visibility: hidden;
+            }
+        }
+    }
+
+    #manual-ao-hdiw-modal-body-wrap {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    /* END How to modals. */
+
+    /* Tour modal */
+    #wphb-tour-minification-modal .sui-box-banner > img {
+        padding: 70px 50px 65px !important;
+        background-color: #F2F2F2;
+    }
+
+    /* Settings */
+    .wrap-wphb-minification .settings-form {
+        margin: 0;
+    }
+
+    /* Network settings */
+    .box-minification-network-settings {
+        .sui-border-frame div {
+            margin-bottom: 30px;
+
+            &:nth-child(4) {
+                margin-bottom: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &.sui-disabled {
+                opacity: .5;
+                pointer-events: none;
+                background-color: #F2F2F2;
+                margin: 30px -30px;
+                padding: 30px;
+            }
+
+            &.sui-upsell-row {
+                padding-bottom: 30px !important;
+                margin-bottom: -30px !important;
+                margin-top: 30px;
+            }
+
+            .sui-notice.sui-notice-warning {
+                margin-bottom: 10px;
+            }
+        }
+
+        .sui-side-tabs {
+            margin-top: 10px;
+        }
+    }
+
+    .sui-tag.sui-tag-green {
+		padding: 0px 8px 0px 8px;
+        min-height: 2px;
+        text-transform: uppercase;
+        font-size: 9px;
+        line-height: 12px;
+        top: 8px !important;
+	}
+
+    .sui-tag.sui-tag-connect {
+		padding: 0px 8px 0px 8px;
+		min-height: 2px;
+		font-size: 9px;
+		line-height: 12px;
+		border: 1px solid #286EFA;
+		border-radius: 12px;
+		color: #286EFA;
+		background-color: white;
+	}
+}
+
+#critical_css_file_exclude .sui-table .sui-box-body .sui-label + .wphb-dash-table-row {
+    border-top: 0 !important;
+}
+
+#critical_progress_tag.sui-tag {
+    .sui-icon-info,
+    .sui-icon-loader.sui-loading {
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+
+    .sui-icon-info:not(.sui-icon-error):before,
+    .sui-icon-loader:before {
+        color: #ffffff;
+    }
+
+    .sui-icon-info.sui-icon-error:before {
+        color: #333;
+    }
+
+    top: 0 !important;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 1px 8px;
+}
+
+#critical_progress_tag.sui-tag-grey {
+    background-color: #666666;
+    color: #ffffff;
+}

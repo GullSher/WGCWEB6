@@ -1,0 +1,138 @@
+{
+	"apiVersion": "1",
+	"name": "bssb/social-share",
+	"title": "Social Share",
+	"description": "Share your website/website-page link.",
+	"category": "widgets",
+	"keywords": [
+		"share",
+		"social share",
+		"page share"
+	],
+	"textdomain": "b-social-share",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": ""
+		},
+		"cId": {
+			"type": "string",
+			"default": ""
+		},
+		"socials": {
+			"type": "array",
+			"default": [
+				{
+					"networkType": "socialNetworks",
+					"network": "facebook",
+					"isUpIcon": false,
+					"icon": {
+						"class": "fab fa-facebook-f",
+						"color": "#1877f2"
+					},
+					"upIcon": {
+						"id": null,
+						"url": "",
+						"alt": "",
+						"title": ""
+					}
+				},
+				{
+					"networkType": "socialNetworks",
+					"network": "twitter",
+					"isUpIcon": false,
+					"icon": {
+						"class": "fab fa-twitter",
+						"color": "#1da1f2"
+					},
+					"upIcon": {
+						"id": null,
+						"url": "",
+						"alt": "",
+						"title": ""
+					}
+				},
+				{
+					"networkType": "socialNetworks",
+					"network": "linkedin",
+					"isUpIcon": false,
+					"icon": {
+						"class": "fab fa-linkedin-in",
+						"color": "#0a66c2"
+					},
+					"upIcon": {
+						"id": null,
+						"url": "",
+						"alt": "",
+						"title": ""
+					}
+				},
+				{
+					"networkType": "mobileMessenger",
+					"network": "whatsapp",
+					"isUpIcon": false,
+					"icon": {
+						"class": "fab fa-whatsapp",
+						"color": "#25d366"
+					},
+					"upIcon": {
+						"id": null,
+						"url": "",
+						"alt": "",
+						"title": ""
+					}
+				}
+			]
+		},
+		"alignment": {
+			"type": "string",
+			"default": "left"
+		},
+		"theme": {
+			"type": "string",
+			"default": "default"
+		},
+		"background": {
+			"type": "object",
+			"default": {
+				"color": "#0000"
+			}
+		},
+		"size": {
+			"type": "string",
+			"default": "28px"
+		},
+		"padding": {
+			"type": "string",
+			"default": "10px"
+		},
+		"margin": {
+			"type": "string",
+			"default": "10px"
+		},
+		"border": {
+			"type": "object",
+			"default": {
+				"radius": "50%"
+			}
+		},
+		"shadow": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [
+			"wide",
+			"full"
+		],
+		"html": false
+	},
+	"example": {
+		"attributes": {
+			"preview": true
+		}
+	},
+	"editorScript": "file:dist/editor.js",
+	"script": "file:dist/script.js"
+}

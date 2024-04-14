@@ -1,0 +1,35 @@
+/* ****************************************************************************
+ * COMMON: BUTTONS
+ */
+
+.wpmud .wrap-wp-hummingbird {
+    .wpdui-btn {
+        font: 500 12px/16px $font !important;
+        padding: 7px 16px;
+        height: 30px;
+        background-color: #888;
+        color: #FFFFFF;
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        transition: all .3s ease;
+        -webkit-transition: all .3s ease;
+        text-shadow: none !important;
+    }
+
+    #wphb-audits-filter-button.active {
+        border-color: #888;
+        background-color: #888;
+        color: #fff;
+    }
+}
+#delay-js-non-pro-member-modal {
+    .sui-box {
+        button.sui-button-icon {
+            color: #FFFFFF;
+        }
+        button.sui-button-icon:hover,
+        button.sui-button-icon:focus {
+            color: #333;
+        }
+    }
+}

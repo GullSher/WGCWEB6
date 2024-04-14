@@ -1,0 +1,496 @@
+.ue-flip-box { 
+    width: 100%;
+}
+
+.ue-flip-box__container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+  	perspective: 1000px;
+}
+
+.ue-flip-box__container[data-trigger="click"] {
+    cursor: pointer;
+}
+
+.ue-flip-box__panel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    transform-style: preserve-3d;
+  	transition: all var(--duration) cubic-bezier(0.455, 0.030, 0.515, 0.955);    
+}
+
+.ue-flip-box__panel.ue-flip-box__panel--back {
+    backface-visibility: hidden;
+}
+
+.ue-flip-box__panel__wrapper { 
+	height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
+.ue-flip-box__panel__content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  	overflow-wrap: break-word;
+}
+
+.ue-flip-box__panel__content svg {
+    width: 1em;
+    height: 1em;
+    position: relative;
+    display: block;
+}
+
+.ue-flip-box__panel--back .ue_btn{
+	text-decoration:none;
+	transition:all 0.25s ease 0s;
+    text-align:center;
+    pointer-events: auto !important;
+}
+
+.ue-flip-box__panel--back a{
+    pointer-events: auto !important;  
+}
+
+.ue-flip-box__icon
+{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* 
+* Flip Down Animation
+*/
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-flip_down .ue-flip-box__panel--front {
+    transform: none;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-flip_down .ue-flip-box__panel--back {
+    transform: rotateX(180deg) rotateY(0);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-flip_down .ue-flip-box__panel--front {
+    transform: rotateX(-180deg) rotateY(0);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-flip_down .ue-flip-box__panel--back {
+    transform: none;
+}
+
+
+/* 
+* Flip Up Animation
+*/
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-flip_up .ue-flip-box__panel--front {
+    transform: none;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-flip_up .ue-flip-box__panel--back {
+    transform: rotateX(-180deg) rotateY(0);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-flip_up .ue-flip-box__panel--front {
+    transform: rotateX(180deg) rotateY(0);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-flip_up .ue-flip-box__panel--back {
+    transform: none;
+}
+
+/* 
+* Flip Right Animation
+*/
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-flip_right .ue-flip-box__panel--front {
+    transform: none;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-flip_right .ue-flip-box__panel--back {
+    transform: rotateY(-180deg);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-flip_right .ue-flip-box__panel--front {
+    transform: rotateY(180deg);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-flip_right .ue-flip-box__panel--back {
+    transform: none;
+}
+
+/* 
+* Flip Left Animation
+*/
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-flip_left .ue-flip-box__panel--front {
+    transform: none;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-flip_left .ue-flip-box__panel--back {
+    transform: rotateY(180deg);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-flip_left .ue-flip-box__panel--front {
+    transform: rotateY(-180deg);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-flip_left .ue-flip-box__panel--back {
+    transform: none;
+}
+
+/* 
+* Flip Alternative Down Animation
+*/
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-flip-alt_down .ue-flip-box__panel--front {
+    transform: none;
+    transform-origin: 50% 0%;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-flip-alt_down .ue-flip-box__panel--back {
+    transform: translateY(-100%) rotateX(180deg); 
+    transform-origin: 50% 100%;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-flip-alt_down .ue-flip-box__panel--front {
+    transform: translateY(-100%) rotateX(-180deg); 
+    transform-origin: 50% 100%;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-flip-alt_down .ue-flip-box__panel--back {
+    transform: none;
+  transform-origin: 50% 0%;
+}
+
+
+/* 
+* Flip Alternative Up Animation
+*/
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-flip-alt_up .ue-flip-box__panel--front {
+    transform: none;
+    transform-origin: 0% 50%;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-flip-alt_up .ue-flip-box__panel--back {
+    transform: translateY(100%) rotateX(-180deg);
+    transform-origin: 50% 0%;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-flip-alt_up .ue-flip-box__panel--front {
+    transform: translateY(100%) rotateX(180deg);
+    transform-origin: 50% 0%;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-flip-alt_up .ue-flip-box__panel--back {
+    transform: none;
+    transform-origin: 0% 50%;
+}
+
+/* 
+* Flip Alternative Right Animation
+*/
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-flip-alt_right .ue-flip-box__panel--front {
+    transform: none;
+    transform-origin: 0% 50%;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-flip-alt_right .ue-flip-box__panel--back {
+    transform: translateX(-100%) rotateY(-180deg);
+    transform-origin: 100% 0%;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-flip-alt_right .ue-flip-box__panel--front {
+    transform: translateX(-100%) rotateY(180deg);
+    transform-origin: 100% 0%;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-flip-alt_right .ue-flip-box__panel--back {
+    transform: none;
+    transform-origin: 0% 50%;
+}
+
+/* 
+* Flip Alternative Left Animation
+*/
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-flip-alt_left .ue-flip-box__panel--front {
+    transform: none;
+    transform-origin: 100% 50%;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-flip-alt_left .ue-flip-box__panel--back {
+    transform: translateX(100%) rotateY(180deg);
+    transform-origin: 0% 50%;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-flip-alt_left .ue-flip-box__panel--front {
+    transform: translateX(100%) rotateY(-180deg);
+    transform-origin: 0% 50%;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-flip-alt_left .ue-flip-box__panel--back {
+    transform: none;
+    transform-origin: 100% 50%;
+}
+
+/* 
+* Push Down Animation
+*/
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-push_down .ue-flip-box__panel--front {
+    transform: none;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-push_down .ue-flip-box__panel--back {
+    transform: translateY(-100%);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-push_down .ue-flip-box__panel--front {
+    transform: translateY(100%);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-push_down .ue-flip-box__panel--back {
+    transform: none;
+}
+
+
+/* 
+* Push Up Animation
+*/
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-push_up .ue-flip-box__panel--front {
+    transform: none;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-push_up .ue-flip-box__panel--back {
+    transform: translateY(100%);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-push_up .ue-flip-box__panel--front {
+    transform: translateY(-100%);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-push_up .ue-flip-box__panel--back {
+    transform: none;
+}
+
+/* 
+* Push Right Animation
+*/
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-push_right .ue-flip-box__panel--front {
+    transform: none;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-push_right .ue-flip-box__panel--back {
+    transform: translateX(-100%);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-push_right .ue-flip-box__panel--front {
+    transform: translateX(100%);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-push_right .ue-flip-box__panel--back {
+    transform: none;
+}
+
+/* 
+* Push Left Animation
+*/
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-push_left .ue-flip-box__panel--front {
+    transform: none;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-push_left .ue-flip-box__panel--back {
+    transform: translateX(100%);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-push_left .ue-flip-box__panel--front {
+    transform: translateX(-100%);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-push_left .ue-flip-box__panel--back {
+    transform: none;
+}
+
+/* 
+* Slide Down Animation
+*/
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-slide_down .ue-flip-box__panel--back {
+    transform: translateY(-100%);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-slide_down .ue-flip-box__panel--back {
+    transform: translateY(0);
+}
+
+/* 
+* Flip Up Animation
+*/
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-slide_up .ue-flip-box__panel--back {
+    transform: translateY(100%);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-slide_up .ue-flip-box__panel--back {
+    transform: translateY(0);
+}
+
+/* 
+* Flip Right Animation
+*/
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-slide_right .ue-flip-box__panel--back {
+    transform: translateX(100%);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-slide_right .ue-flip-box__panel--back {
+    transform: translateX(0);
+}
+
+/* 
+* Flip Left Animation
+*/
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-slide_left .ue-flip-box__panel--back {
+    transform: translateX(-100%);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-slide_left .ue-flip-box__panel--back {
+    transform: translateX(0);
+}
+
+/* 
+* Swap Down Animation
+*/
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-swap_down .ue-flip-box__panel--front {
+    transform: none;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-swap_down .ue-flip-box__panel--back {
+    transform: translateY(-100%);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-swap_down .ue-flip-box__panel--front {
+    transform: translateY(-100%);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-swap_down .ue-flip-box__panel--back {
+    transform: none;
+}
+
+
+/* 
+* Swap Up Animation
+*/
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-swap_up .ue-flip-box__panel--front {
+    transform: none;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-swap_up .ue-flip-box__panel--back {
+    transform: translateY(100%);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-swap_up .ue-flip-box__panel--front {
+    transform: translateY(100%);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-swap_up .ue-flip-box__panel--back {
+    transform: none;
+}
+
+/* 
+* Swap Right Animation
+*/
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-swap_right .ue-flip-box__panel--front {
+    transform: none;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-swap_right .ue-flip-box__panel--back {
+    transform: translateX(-100%);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-swap_right .ue-flip-box__panel--front {
+    transform: translateX(-100%);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-swap_right .ue-flip-box__panel--back {
+    transform: none;
+}
+
+/* 
+* Swap Left Animation
+*/
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-swap_left .ue-flip-box__panel--front {
+    transform: none;
+}
+
+.ue-flip-box .ue-flip-box__container.uc-hide.ue-swap_left .ue-flip-box__panel--back {
+    transform: translateX(100%);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-swap_left .ue-flip-box__panel--front {
+    transform: translateX(100%);
+}
+
+.ue-flip-box .ue-flip-box__container.uc-show.ue-swap_left .ue-flip-box__panel--back {
+    transform: none;
+}
+
+/* 
+  * Fade Animation
+  */
+.ue-flip-box__container.uc-hide.ue-fade .ue-flip-box__panel--back {
+    opacity: 0;
+}
+
+.ue-flip-box__container.uc-show.ue-fade .ue-flip-box__panel--back {
+    opacity: 1;
+}
+
+/* 
+  * Zoom In Animation
+  */
+.ue-flip-box__container.uc-hide.ue-zoomin .ue-flip-box__panel--back {
+    opacity: 0; 
+    transform: scale(0.5);
+}
+
+.ue-flip-box__container.uc-show.ue-zoomin .ue-flip-box__panel--back {
+    opacity: 1; 
+    transform: scale(1);
+}
+
+/* 
+  * Zoom Out Animation
+  */
+  .ue-flip-box__container.ue-zoomout .ue-flip-box__panel--front {
+    z-index: 1;
+  }
+ .ue-flip-box__container.uc-hide.ue-zoomout .ue-flip-box__panel--front {
+    opacity: 1; 
+    transform: scale(1);
+}
+.ue-flip-box__container.uc-show.ue-zoomout .ue-flip-box__panel--front {
+    opacity: 0; 
+    transform: scale(0.5);
+}
+
+/* 
+  * Zoom In/Out Animation
+  */
+.ue-flip-box__container.uc-hide.ue-zoominout .ue-flip-box__panel--front{
+    opacity: 1; 
+    transform: scale(1);
+}
+.ue-flip-box__container.uc-hide.ue-zoominout .ue-flip-box__panel--back {
+    opacity: 0; 
+    transform: scale(0.5);
+}
+.ue-flip-box__container.uc-show.ue-zoominout .ue-flip-box__panel--front {
+    opacity: 0; 
+    transform: scale(0.5);
+}
+.ue-flip-box__container.uc-show.ue-zoominout .ue-flip-box__panel--back{
+    opacity: 1; 
+    transform: scale(1);
+}
+
